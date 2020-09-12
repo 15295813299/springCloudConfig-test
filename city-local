@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: micro-city
+  datasource:
+    url: jdbc:mysql://localhost:3306/platform2003?serverTimezone=GMT%2B8
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:20000/eureka
